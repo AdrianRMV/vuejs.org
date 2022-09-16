@@ -8,7 +8,7 @@ order: 601
 
 ## Como se siguen los cambios
 
-Cuando se le pasa un objeto de JavaScript a una instancia de Vue como su opción `data`, Vue irá a través de todas sus propiedades y las convertirá a un getter/setter usango [Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Esto solo funciona es versiones de ES5 en adelante y es una característica un-shimable, que es por lo que Vue no soporta IE8 ni inferior.
+Cuando se le pasa un objeto de JavaScript a una instancia de Vue como su opción `data`, Vue irá a través de todas sus propiedades y las convertirá a un getter/setter usando [Object.defineProperty](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Esto solo funciona es versiones de ES5 en adelante y es una característica un-shimable, que es por lo que Vue no soporta IE8 ni inferior.
 
 Los getter/setter son invisibles para el usuario, pero por debajo permite a Vue realizar el seguimiento de dependencias y notificar los cambios cuando se accede a las propiedades o son modificadas. Una advertencia es que la consola de los navegadores da diferente formato a los getter/setters cuando los objetos manipulados son registrados, por lo que quizás quiera instalar [vue-devtools](https://github.com/vuejs/vue-devtools) para un resultado más amigable.
 
